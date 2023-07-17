@@ -70,7 +70,8 @@ Under "Who has access to the app," choose "Anyone, even anonymous."
 Click "Deploy."
 Ensure that the URL of the Google Apps Script web app is correct in your HTML page's JavaScript code:
 
-`$.ajax({
+```
+$.ajax({
   type: 'POST',
   url: 'https://script.google.com/macros/s/AKfycbyBlhtF1_IZkZVGRytl9b54v91BB07E8Hwj6XbYTxYblwiACJLDi5Ne89fjRSNC12Wa/exec',
   data: JSON.stringify(data),
@@ -78,7 +79,8 @@ Ensure that the URL of the Google Apps Script web app is correct in your HTML pa
   contentType: 'application/json',
   // Rest of the code...
 });
-`
+
+```
 Replace the URL with the correct URL of your deployed Google Apps Script web app.
 
 Double-check that your Google Apps Script code is correctly handling the form data:
