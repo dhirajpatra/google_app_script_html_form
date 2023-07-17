@@ -1,4 +1,4 @@
-# google app script save data by html form
+# Saving data by Google App Script with html form
 How to use Google App Script to save the data into google spredsheet  
 
 ### Follow the steps
