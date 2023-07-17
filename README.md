@@ -16,7 +16,9 @@ Check Google Apps Script Permissions: Ensure that the web app is deployed correc
 Google Apps Script Code: Make sure the Google Apps Script code is correct and does not have any errors. Double-check the doPost function and the Spreadsheet ID (YOUR_SPREADSHEET_ID) to ensure they are correct.
 Replace the default code with the following:
 
-`function doGet(e) {
+```
+
+function doGet(e) {
   if (e.parameter && Object.keys(e.parameter).length > 0) {
     var ss = SpreadsheetApp.openById('SPREDSHEET-ID');
     var sheet = ss.getSheetByName('Sheet1'); // Change the sheet name as needed
@@ -36,7 +38,8 @@ Replace the default code with the following:
   // Return a simple HTML response if no data is provided
   var htmlOutput = '<h1>Form Submission</h1><p>No data submitted.</p>';
   return HtmlService.createHtmlOutput(htmlOutput);
-}`
+}
+```
 
 Save the Google Apps Script project and deploy it as a web app:
 
