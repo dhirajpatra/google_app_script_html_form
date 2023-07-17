@@ -52,7 +52,7 @@ Set "Who has access" to "Anyone, even anonymous."
 Click "Deploy" and authorize the permissions.
 
 Once deployed, you will get a URL for the web app. Copy the URL; it will look something like this:
-`https://script.google.com/macros/s/.../exec`
+```https://script.google.com/macros/s/.../exec```
 
 Replace 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL' with the URL you copied from the deployed web app.
 
