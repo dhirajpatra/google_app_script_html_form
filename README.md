@@ -41,6 +41,32 @@ function doGet(e) {
 }
 ```
 
+If you want to save the data row wise then use the below code.
+
+```
+function doGet(e) {
+  if (e.parameter && Object.keys(e.parameter).length > 0) {
+    var ss = SpreadsheetApp.openById('SPREDSHEET-ID');
+    var sheet = ss.getSheetByName('Sheet1'); // Change the sheet name as needed
+    var data = [];
+    
+    // Convert the query parameters into an array of data
+    for (var key in e.parameter) {
+      data.push([e.parameter[key]]);
+    }
+    
+    // Append the data to the Google Sheets in horizontal row wise
+    sheet.getRange(1, sheet.getLastColumn() + 1, data.length, 1).setValues(data);
+    
+    return ContentService.createTextOutput('Data saved successfully.');
+  }
+  
+  // Return a simple HTML response if no data is provided
+  var htmlOutput = '<h1>Form Submission</h1><p>No data submitted.</p>';
+  return HtmlService.createHtmlOutput(htmlOutput);
+}
+```
+
 Save the Google Apps Script project and deploy it as a web app:
 
 Click on the floppy disk icon to save the project.
