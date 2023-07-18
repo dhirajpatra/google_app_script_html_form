@@ -5,11 +5,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+
+
   <form id="form">
     <input type="text" name="name" placeholder="Name">
+<br>
     <input type="email" name="email" placeholder="Email">
+<br>
     <input type="button" value="Save" id="save">
   </form>
+
+
   <script>
     $(document).ready(function () {
       // Add a click event listener to the save button.
@@ -26,7 +32,7 @@
         var queryString = $.param(data);
 
         // Send the data to the Google Apps Script using a GET request.
-        $.get("https://script.google.com/macros/s/YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL?" + queryString)
+        $.get("https://script.google.com/macros/s/AKfycbx8hn9qjvfWiYLMcYzxB-w4Jy-Mu5yiZ_8jTmvLNHPLZcFbhW7u92kGSg522o8D3VMl/exec?" + queryString)
           .done(function (response) {
             alert(response); // Show success message.
             $("#form")[0].reset(); // Clear the form fields.
@@ -38,5 +44,11 @@
       });
     });
   </script>
+
+
 </body>
 </html>
+
+
+
+
